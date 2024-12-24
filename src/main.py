@@ -23,7 +23,7 @@ def main():
         print(f"Peak Traffic Time: {peak_traffic_time}")
 
         # Visualize Traffic Patterns
-        traffic_by_hour = process_data['hour'].value_counts().sort_index()
+        traffic_by_hour = processed_data['hour'].value_counts().sort_index()
         plt.bar(traffic_by_hour.index, traffic_by_hour.values)
         plt.xlabel("Hour")
         plt.ylabel("Traffic")
