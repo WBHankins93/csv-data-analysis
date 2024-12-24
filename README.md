@@ -14,21 +14,34 @@ This project analyzes clickstream data to extract business insights, such as:
 ## Installation
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/yourusername/data-analysis.git
    cd data-analysis
    ```
 
-2. Install dependencies
+2. Create and activate virtual environment
+- On Linux/MacOS
+    ```
+    python3 -m venv env
+    source env/bin/activate
+    ```
+
+3. Install dependencies
+
     ```
     pip install -r requirements.txt
     ```
 
-## Usage
-    1. Add your dataset in the data/ folder.
-    2. Run the analysis:
+4. Run project
     ```
     python src/main.py
+    ```
+
+## Requirements.txt
+- After installing new dependencies, update requirements.txt to keep it in sync with the environment:
+    ```
+    pip freeze > requirements.txt
     ```
 
 ## Roadmap

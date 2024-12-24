@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from src.utils import process_data
 
 # Load the dataset
-DATA_FILE = "data/clickstreams_data.csv"
+DATA_FILE = "data/clickstream_data.csv"
 
 def main():
     try:
@@ -16,7 +16,7 @@ def main():
         # Extract insights
         unique_users = processed_data['user_id'].nunique()
         most_visited_page = processed_data['page'].mode()[0]
-        peak_traffic_time = processed_data['hour'].value_counts().idmax()
+        peak_traffic_time = processed_data['hour'].value_counts().idxmax()
 
         print(f"Unique Users: {unique_users}")
         print(f"Most Visited Page: {most_visited_page}")
